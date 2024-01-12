@@ -31,6 +31,13 @@ headers in the plugin.
    a file at Build/Products/Debug-iphoneos/libHealthKitPlugin.a or similar, depending
    on your build configuration.
 
+   - NOTE: I've seen an error like this: `godot/core/typedefs.h:41:10 'platform_config.h' file not found`
+     To fix it (and this is probably an awful hack) i've edited `core/typedefs.h` and changed this line:
+
+     `- #include "platform_config.h"`
+
+     `+ #include "platform/ios/platform_config.h"`
+
 
 4. Copy libHealthKitPlugin.a into your godot project under res://ios/plugins
 
