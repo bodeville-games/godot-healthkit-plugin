@@ -1,0 +1,17 @@
+[config]
+name="HealthKitPlugin"
+binary="libHealthKitPlugin.a"
+
+initialization="init_healthkit_plugin"
+deinitialization="deinit_healthkit_plugin"
+
+[dependencies]
+linked=[]
+embedded=[]
+system=["HealthKit.framework"]
+
+capabilities=["healthkit"]
+
+files=[]
+
+[plist]
